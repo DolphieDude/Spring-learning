@@ -7,6 +7,13 @@ public class TypeMunchkinModel {
         this.card = card;
     }
 
+    public TypeMunchkinModel() {
+    }
+
+    public void setCard(TypeMunchkinCard card) {
+        this.card = card;
+    }
+
     void wearCard() {
         System.out.println("Wore " + this.card.getCard());
     }

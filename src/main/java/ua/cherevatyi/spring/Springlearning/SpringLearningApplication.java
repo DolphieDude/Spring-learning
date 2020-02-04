@@ -13,8 +13,9 @@ public class SpringLearningApplication {
 		TestBean newBean = appContext.getBean("myBean", TestBean.class);
 //		TypeMunchkinCard card = appContext.getBean("card", TypeMunchkinCard.class);
 		TypeMunchkinModel typeMunchkinCardUser = appContext.getBean("munchkinTypeCardModel", TypeMunchkinModel.class); //using dependency injection
-		appContext.close();
 		System.out.println(newBean.getId());
 		typeMunchkinCardUser.wearCard();
+		TypeMunchkinModel munchkinWithTypeSetter = appContext.getBean("munchkinWithTypeSetter", TypeMunchkinModel.class); //Setter Dependency Injection
+		munchkinWithTypeSetter.wearCard();
 	}
 }

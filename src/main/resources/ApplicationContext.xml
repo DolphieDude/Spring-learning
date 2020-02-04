@@ -18,4 +18,8 @@
     <bean id="munchkinTypeCardModel" class="ua.cherevatyi.spring.Springlearning.TypeMunchkinModel">
         <constructor-arg ref="card"/>
     </bean>
+
+    <bean id="munchkinWithTypeSetter" class="ua.cherevatyi.spring.Springlearning.TypeMunchkinModel">
+        <property name="card" ref="card"/>
+    </bean>
 </beans>
