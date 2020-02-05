@@ -17,5 +17,6 @@ public class SpringLearningApplication {
 		typeMunchkinCardUser.wearCard();
 		TypeMunchkinModel munchkinWithTypeSetter = appContext.getBean("munchkinWithTypeSetter", TypeMunchkinModel.class); //Setter Dependency Injection
 		munchkinWithTypeSetter.wearCard();
+		System.out.println(munchkinWithTypeSetter.isSupermunchkin());
 	}
 }

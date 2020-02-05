@@ -1,20 +1,26 @@
 package ua.cherevatyi.spring.Springlearning;
 
-public class TypeMunchkinModel {
-    private TypeMunchkinCard card;
+import lombok.Setter;
 
-    public TypeMunchkinModel(TypeMunchkinCard card) {
-        this.card = card;
+import java.util.List;
+
+@Setter
+public class TypeMunchkinModel {
+    private List<TypeMunchkinCard> cards;
+    private boolean isSupermunchkin;
+
+    public TypeMunchkinModel(List<TypeMunchkinCard> cards) {
+        this.cards = cards;
     }
 
     public TypeMunchkinModel() {
     }
 
-    public void setCard(TypeMunchkinCard card) {
-        this.card = card;
+    public boolean isSupermunchkin() {
+        return isSupermunchkin;
     }
 
     void wearCard() {
-        System.out.println("Wore " + this.card.getCard());
+        this.cards.forEach(c -> System.out.println("Wore " + c.getCard()));
     }
 }
