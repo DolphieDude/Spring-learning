@@ -7,7 +7,7 @@ public class TestBean {
         this.id = id;
     }
 
-    public String getId() {
+    String getId() {
         return id;
     }
 

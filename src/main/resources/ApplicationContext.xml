@@ -31,8 +31,13 @@
         <constructor-arg ref="cards"/>
     </bean>
 
-    <bean id="munchkinWithTypeSetter" class="ua.cherevatyi.spring.Springlearning.TypeMunchkinModel">
+    <bean id="munchkinWithTypeSetter" class="ua.cherevatyi.spring.Springlearning.TypeMunchkinModel"
+          scope="prototype">
         <property name="cards" ref="cards"/>
         <property name="supermunchkin" value="${TypeMunchkinModel.isSupermunchkin}"/>
     </bean>
+
+
+    <bean id="initAndDestroyTest" class="ua.cherevatyi.spring.Springlearning.ClassCard"
+        init-method="doInit" destroy-method="doDestroy"/>
 </beans>
