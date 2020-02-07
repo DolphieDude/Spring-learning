@@ -1,9 +1,14 @@
 package ua.cherevatyi.spring.Springlearning;
 
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 
+@Component
 @Setter
 public class TypeMunchkinModel {
     private List<TypeMunchkinCard> cards;
@@ -14,10 +19,17 @@ public class TypeMunchkinModel {
     }
 
     public TypeMunchkinModel() {
+        this.cards = new ArrayList<>();
     }
 
-    public boolean isSupermunchkin() {
+    boolean isSupermunchkin() {
         return isSupermunchkin;
+    }
+
+    @Autowired
+    @Qualifier("classCard")
+    void addCard(TypeMunchkinCard card) {
+        this.cards.add(card);
     }
 
     void wearCard() {

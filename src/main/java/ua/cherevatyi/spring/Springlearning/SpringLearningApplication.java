@@ -58,6 +58,8 @@ public class SpringLearningApplication {
 		System.out.println(testAnnoRace.getCard());
 		TypeMunchkinCard testAnnoClass = annoContext.getBean("classCard", TypeMunchkinCard.class);
 		System.out.println(testAnnoClass.getCard());
+		TypeMunchkinModel autoMunch = annoContext.getBean("typeMunchkinModel", TypeMunchkinModel.class);
+		autoMunch.wearCard();
 		annoContext.close();
 	}
 }
