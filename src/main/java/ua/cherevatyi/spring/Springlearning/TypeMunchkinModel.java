@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+//@Component
 @Setter
 public class TypeMunchkinModel {
     private List<TypeMunchkinCard> cards;
@@ -26,11 +26,11 @@ public class TypeMunchkinModel {
         return isSupermunchkin;
     }
 
-    @Autowired
-    @Qualifier("classCard")
-    void addCard(TypeMunchkinCard card) {
-        this.cards.add(card);
-    }
+//    @Autowired
+//    @Qualifier("classCard")
+//    void addCard(TypeMunchkinCard card) {
+//        this.cards.add(card);
+//    }
 
     void wearCard() {
         this.cards.forEach(c -> System.out.println("Wore " + c.getCard()));
